@@ -1,0 +1,15 @@
+/**
+*Gestion du style global
+**/
+
+//Utilisation de box-sizing
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+//Mise en place de la police globale
+body {
+    font-family: 'roboto', sans-serif;
+}

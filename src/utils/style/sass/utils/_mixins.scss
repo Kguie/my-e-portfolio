@@ -1,0 +1,17 @@
+/**
+*Gestion des mixins
+**/
+
+//Box-sizing
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+
+//Centre un bloc sans toucher aux margin top et bottom
+@mixin center-box {
+    margin-left: auto;
+    margin-right: auto;
+}

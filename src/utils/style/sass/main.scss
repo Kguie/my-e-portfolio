@@ -1,0 +1,16 @@
+/**
+*Gestion des imports des scss
+**/
+
+@import "./base/variables_overrides"; // <-- ajouter cette ligne tout en haut du fichier
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Utils
+@import './utils/mixins';
+
+//Base
+@import './base/global';
+
+//Components
+@import '../../../components/Header/index';
