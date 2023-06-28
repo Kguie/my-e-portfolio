@@ -13,5 +13,58 @@ $success: $cyan;
 //Taille de police de référence
 $font-size-base: 1rem !default;
 
-//Navbar
-$nav-link-color: #fff !default;
+.navbar {
+    // fs-6 d-flex flex-row justify-content-end fw-bold text-uppercase position-absolute
+    position: absolute !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    z-index: 2 !important;
+    padding-right: 3.5% !important;
+}
+
+.nav-link {
+    overflow: hidden;
+}
+
+//Toggle button
+.navbar-toggler {
+    border-color: #fff !important;
+
+    &:hover {
+        scale: 1.2;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px #fff !important;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("../../../../assets/list.svg") !important;
+}
+
+.show {
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (min-width:768px) {
+        background: transparent;
+    }
+}
+
+.navbar .collapsing {
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+//buttons
+.btn {
+    border-radius: 40px !important;
+}

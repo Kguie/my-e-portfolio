@@ -15,3 +15,22 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+//media queries
+@mixin sm-only {
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        @content;
+    }
+}
+
+@mixin md-only {
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        @content;
+    }
+}
+
+@mixin lg-only {
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        @content;
+    }
+}

@@ -7,10 +7,16 @@
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 //Utils
+@import './utils/variables';
 @import './utils/mixins';
+@import './utils/animations';
 
 //Base
 @import './base/global';
 
 //Components
-@import '../../../components/Header/index';
+@import '../../../components/IconButton/index';
+@import '../../../components/TextButton/index';
+@import '../../../components/Banner/index';
+@import '../../../components/NavHeader/index';
+@import '../../../components/AboutMe/index';

@@ -1,0 +1,61 @@
+/**
+ *Style du NavHeader
+ **/
+
+.menu__link {
+    color: #fff;
+    position: relative;
+    font-family: 'roboto-light', 'roboto';
+    z-index: 1;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%;
+    text-align: center;
+
+
+    &::after {
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '.';
+        color: transparent;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background: transparent;
+    }
+
+    &:hover {
+        &::after {
+            animation: circle 1.5s ease-in forwards;
+        }
+    }
+
+    @include md-only {
+        &::after {
+            top: 100%;
+            margin: auto;
+            width: 100%;
+            background: $clr-secondary;
+            height: 1px;
+            opacity: 0;
+        }
+
+        &:hover {
+            color: $clr-secondary;
+            transition: all 0.5s ease;
+            transform-origin: center;
+
+            &:after {
+                opacity: 1;
+                transition: all 0.5s ease;
+                transform-origin: center;
+                animation: none;
+            }
+        }
+    }
+}

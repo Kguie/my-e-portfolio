@@ -13,3 +13,36 @@
 body {
     font-family: 'roboto', sans-serif;
 }
+
+//Section de chaque page
+.page_section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &__title {
+        display: inline;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 140%;
+            left: 30%;
+            content: ".";
+            height: 2px;
+            width: 40%;
+            background-color: $clr-primary;
+            color: transparent;
+        }
+
+        &::after {
+            position: absolute;
+            top: 170%;
+            left: 40%;
+            content: ".";
+            height: 2px;
+            width: 20%;
+            background-color: $clr-primary;
+            color: transparent;
+        }
+    }
+}

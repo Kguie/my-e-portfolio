@@ -2,29 +2,31 @@
  * Component NavHeader
  **/
 
+import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 /**
  * Affiche le navigateur du header en fonction de la taille de l'écran
  */
 export default function NavHeader() {
+
+    const navigate: NavigateFunction = useNavigate()
+    //Récupération de l'url pour déterminer la couleur de fond 
+    const currentUrl: string = window.location.href;
     return (
-        <Nav
-            className='fs-5 d-flex flex-row justify-content-end fw-bold text-uppercase'
-            onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-        >
-            <Nav.Item className='nav__item'>
-                <Nav.Link >Accueil</Nav.Link>
-            </Nav.Item >
-            <Nav.Item className='nav__item'>
-                <Nav.Link >Compétences</Nav.Link>
-            </Nav.Item >
-            <Nav.Item className='nav__item'>
-                <Nav.Link>Projets</Nav.Link>
-            </Nav.Item >
-            <Nav.Item className='nav__item'>
-                <Nav.Link >Contact</Nav.Link>
-            </Nav.Item >
-        </Nav>
+        <Navbar expand="md" className={((currentUrl.includes("contact") || currentUrl.includes("skills") || currentUrl.includes("projects")) ? "bg-primary" : "bg-transparent")}>
+            <Container className='d-flex justify-content-end' fluid>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto w-100 justify-content-end mt-1 ">
+                        <Nav.Link href="#" onClick={() => navigate('/')} ><p className='menu__link'>Accueil</p></Nav.Link>
+                        <Nav.Link href="#" ><p className='menu__link'>Compétences</p></Nav.Link>
+                        <Nav.Link href="#" ><p className='menu__link'>Projets</p></Nav.Link>
+                        <Nav.Link href="#" ><p className='menu__link'>Contact</p></Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }

@@ -1,29 +1,34 @@
 /**
- * Component Header
+ * Component Banner
  **/
 
 import { Row } from "react-bootstrap";
 
 import IconButton from "../IconButton";
-import NavHeader from "../NavHeader";
+import CVButton from "../CVButton";
 
 /**
- * Affiche le header
+ * Affiche la bannière avec le nom, le poste recherché et le bouton télécharger mon CV
  */
-export default function Header() {
+export default function Banner() {
+
     return (
         <header className="header d-flex flex-column" >
-            {/* Navigateur */}
-            <NavHeader />
-
-            {/*  Contenu du header */}
-            <Row fluid className="header__title d-flex flex-column justify-content-center align-items-center text-white text-center ">
+            {/*  Contenu de Banner */}
+            <Row className="header__title d-flex flex-column justify-content-center align-items-center text-white text-center ">
                 <p className="fs-1 fw-bold">Bonjour!</p>
                 <h1 className="fs-1 fw-bold">Je suis Guieba Kévin et bienvenue sur mon portfolio</h1>
-                <p className="fs-6">Développeur web - Développeur d'applications javascript React (recherche alternance) </p>
+                <div className="fs-5 mt-2 d-flex flex-column flex-lg-row  gap-lg-3 justify-content-center">
+                    <p >Développeur web</p>
+                    <p className="d-none d-lg-block">-</p>
+                    <p>Développeur d'applications javascript React (recherche alternance) </p>
+                </div>
+                <div className="mt-3">
+                    <CVButton isColored={false} isLarge={true} />
+                </div>
             </Row>
 
-            {/* Liens du header */}
+            {/* Liens */}
             <div className="header__links d-flex flex-row-reverse gap-3  ">
                 <IconButton
                     icon={

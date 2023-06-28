@@ -15,7 +15,7 @@ export default function IconButton({ icon, link, color }: Props) {
     return (
         <a
             href={link}
-            className={"fs-1 text-white " + color}
+            className={"icon-button " + color}
         >
             {icon}
         </a>

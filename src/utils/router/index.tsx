@@ -4,7 +4,8 @@
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import Header from "../../components/Header";
+import Home from "../../pages/Home";
+import NavHeader from "../../components/NavHeader";
 
 /**
  * Gestion du router et des routes de l'application
@@ -12,8 +13,9 @@ import Header from "../../components/Header";
 export function MyRouter() {
     return (
         <BrowserRouter>
+            <NavHeader />
             <Routes>
-                <Route path="/" element={<Header />} />
+                <Route path="/*" element={<Home />} />
             </Routes>
         </BrowserRouter>
     )
