@@ -1,0 +1,15 @@
+/**
+ * Style de la page Contact
+ **/
+
+.contact-box {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    row-gap: 50px;
+
+    @include md-only {
+        margin-top: 150px;
+        row-gap: 100px;
+        margin-bottom: 150px;
+    }
+}

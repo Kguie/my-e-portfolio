@@ -15,13 +15,18 @@ body {
 }
 
 //Section de chaque page
-.page_section {
+.page-section {
     margin-top: 100px;
     margin-bottom: 100px;
 
     &__title {
         display: inline;
         position: relative;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        color: $clr-blue;
+        text-transform: uppercase;
 
         &::before {
             position: absolute;

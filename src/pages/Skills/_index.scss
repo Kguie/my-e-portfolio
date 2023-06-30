@@ -1,0 +1,13 @@
+/**
+ * Style de la page Skills
+ **/
+
+.skills-box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include md-only {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}

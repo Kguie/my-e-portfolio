@@ -1,0 +1,49 @@
+/**
+ * Style de ContactCard
+ **/
+
+.card-content {
+    background-color: #f2f8f9;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #88D0B2;
+        height: 40px;
+        width: 40px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.25s ease-out;
+    }
+
+    &__arrow {
+        position: absolute;
+        color: #fff;
+        right: 2px;
+        top: -2px;
+    }
+
+    &:hover {
+
+        p,
+        h2 {
+            transition: all 0.3s ease-out;
+            color: #ffffff;
+        }
+
+        &::before {
+            transform: scale(32);
+        }
+
+    }
+}

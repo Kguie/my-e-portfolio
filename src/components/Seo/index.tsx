@@ -11,7 +11,7 @@ type Props = {
 }
 
 /**
- * Affiche le component SEO qui sert à intégrer le SEO dans une page React
+ * Affiche le component SEO qui sert à intégrer le SEO dans une page React à l'aide de helmet
  * @param {string} title - Titre de la page
  * @param {string} description - Description du contenu de la page
  * @param {string} type - Type du contenu de la page
