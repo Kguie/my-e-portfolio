@@ -22,7 +22,7 @@ export default function NavHeader() {
                     <Nav className="me-auto w-100 justify-content-end mt-1 ">
                         <Nav.Link data-testid="nav-link" href="#" onClick={() => navigate('/')} ><p className='menu__link'>Accueil</p></Nav.Link>
                         <Nav.Link data-testid="nav-link" href="#" onClick={() => navigate('/skills')} ><p className='menu__link'>Compétences</p></Nav.Link>
-                        <Nav.Link data-testid="nav-link" href="#" ><p className='menu__link'>Projets</p></Nav.Link>
+                        <Nav.Link data-testid="nav-link" href="#" onClick={() => navigate('/projects')} ><p className='menu__link'>Mes projets</p></Nav.Link>
                         <Nav.Link data-testid="nav-link" href="#" onClick={() => navigate('/contact')}><p className='menu__link'>Contact</p></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

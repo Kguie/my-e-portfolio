@@ -74,7 +74,9 @@ $font-size-base: 1rem !default;
 
 //Cards
 .card {
+    padding: 0 !important;
     border: 0px transparent !important;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
 }

@@ -8,6 +8,7 @@ import Home from "../../pages/Home";
 import NavHeader from "../../components/NavHeader";
 import Contact from "../../pages/Contact";
 import Skills from "../../pages/Skills";
+import MyProjects from "../../pages/MyProjects";
 
 /**
  * Gestion du router et des routes de l'application
@@ -20,6 +21,7 @@ export function MyRouter() {
                 <Route path="/*" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/skills" element={<Skills />} />
+                <Route path="/projects" element={<MyProjects />} />
             </Routes>
         </BrowserRouter>
     )

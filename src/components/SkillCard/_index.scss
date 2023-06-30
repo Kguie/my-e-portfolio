@@ -1,0 +1,51 @@
+/**
+ * Style de ContactCard
+ **/
+
+.skill-card {
+    background-color: $clr-card;
+    position: relative;
+    padding-top: 15px;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    &__content {
+        text-align: center;
+        padding-top: 20px;
+        width: 70%;
+        gap: 10px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: $clr-primary-light;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+    }
+
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+
+        &::before {
+            transform: scale(2.15);
+        }
+
+    }
+}

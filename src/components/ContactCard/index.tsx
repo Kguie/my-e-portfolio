@@ -17,8 +17,8 @@ type Props = {
 export default function ContactCard({ icon, title, text, link }: Props) {
     return (
         <Card >
-            <a href={link} className="card-content">
-                <div className="card-content__arrow">
+            <a href={link} className="contact-card">
+                <div className="contact-card__arrow">
                     →
                 </div>
                 <Card.Img className="ms-4 " width={"40px"} variant="horizontal" src={icon} alt="téléphone" />

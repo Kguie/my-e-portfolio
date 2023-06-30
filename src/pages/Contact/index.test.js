@@ -27,4 +27,4 @@ describe('Contact tests', () => {
         expect(links.length).toEqual(4);
 
     });
-})
+});

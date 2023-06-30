@@ -17,7 +17,7 @@ import CVButton from "../../components/CVButton";
  */
 export default function Contact() {
     const title: string = "Portfolio de Guieba Kévin - Page de contact";
-    const description: string = "Vous cherchez à contacter GUIEBA Kévin, qui recherche une alternance pour un poste développeur d'applications javascript react , c'est par ici.";
+    const description: string = "Vous cherchez à contacter GUIEBA Kévin, qui recherche une alternance pour un poste développeur d'applications javascript react en Guadeloupe ou en full-remote";
 
     return (
         <section className="page-section">
@@ -32,7 +32,7 @@ export default function Contact() {
                     <h1 className="page-section__title">Informations de contact</h1>
                 </div>
                 <Row className="contact-box">
-                    <Col xs={{ span: 10, offset: 1 }} md={{ span: 5 }}>
+                    <Col xs={11} md={5}>
                         <ContactCard
                             icon={phoneIcon}
                             title={"Téléphone"}
@@ -40,7 +40,7 @@ export default function Contact() {
                             link={"tel:+590690674961"}
                         />
                     </Col>
-                    <Col xs={{ span: 10, offset: 1 }} md={{ span: 5 }}>
+                    <Col xs={11} md={5}>
                         <ContactCard
                             icon={envelopeIcon}
                             title={"Émail"}
@@ -48,7 +48,7 @@ export default function Contact() {
                             link={"mailto:kevin.guieba@gmail.com"}
                         />
                     </Col>
-                    <Col xs={{ span: 10, offset: 1 }} md={{ span: 5 }}>
+                    <Col xs={11} md={5}>
                         <ContactCard
                             icon={mapIcon}
                             title={"Localisation"}
@@ -56,7 +56,7 @@ export default function Contact() {
                             link={"https://www.google.fr/maps/@16.201248,-61.6027573,15.83z?entry=ttu"}
                         />
                     </Col>
-                    <Col xs={{ span: 10, offset: 1 }} md={{ span: 5 }}>
+                    <Col xs={11} md={5}>
                         <ContactCard
                             icon={linkedinIcon}
                             title={"LinkedIn"}

@@ -2,14 +2,15 @@
  * Style de ContactCard
  **/
 
-.card-content {
-    background-color: #f2f8f9;
+.contact-card {
+    background-color: $clr-card;
     position: relative;
     z-index: 0;
     overflow: hidden;
     text-decoration: none;
     display: flex;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
     &::before {
         content: "";
@@ -17,7 +18,7 @@
         z-index: -1;
         top: -16px;
         right: -16px;
-        background: #88D0B2;
+        background: $clr-primary-light;
         height: 40px;
         width: 40px;
         border-radius: 32px;

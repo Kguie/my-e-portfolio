@@ -40,13 +40,12 @@
             top: 100%;
             margin: auto;
             width: 100%;
-            background: $clr-secondary;
+            background: #fff;
             height: 1px;
             opacity: 0;
         }
 
         &:hover {
-            color: $clr-secondary;
             transition: all 0.5s ease;
             transform-origin: center;
 
