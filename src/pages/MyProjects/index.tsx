@@ -23,10 +23,10 @@ export default function MyProjects() {
                     <h1 className="page-section__title">Mes projets</h1>
                 </div>
                 <div className="projects-box">
-                    <p className="text-center">Je vous présente plusieurs de mes projets réalisés depuis le début de ma formation de développeur web chez OpenClassrooms, mais aussi après.</p>
-
+                    <p className="text-center text-md-start">Je vous présente plusieurs de mes projets réalisés depuis le début de ma formation de développeur web chez OpenClassrooms, mais aussi après.</p>
+                    <p className="text-center text-md-start">Vous pourrez trouver le détail de ces projets sur les cartes, avec un lien github pour avoir accès au code et aux détails techniques, et quand cela est possible, un url pour pouvoir observer le résultat.</p>
                     {/* Section des boutons de filtres pour afficher les cartes projets */}
-                    <div className="d-flex mt-4 ms-2  gap-3 align-items-baseline flex-wrap ">
+                    <div className="d-flex mt-5 ms-2  gap-3 align-items-baseline flex-wrap ">
                         <p className="fw-bold">Filtres :</p>
                         {react ? <Button variant="success" className="text-white" onClick={() => setReact(false)}>React</Button>
                             : <Button variant="outline-success" onClick={() => setReact(true)} >React</Button>}

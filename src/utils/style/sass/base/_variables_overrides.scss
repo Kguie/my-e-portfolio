@@ -32,39 +32,12 @@ $font-size-base: 1rem !default;
 }
 
 //Toggle button
-.navbar-toggler {
-    border-color: #fff !important;
+.btn-outline {
 
-    &:hover {
-        scale: 1.2;
-        transition: all 0.5s ease-in-out;
+    &:active {
+        border: 1px solid #fff !important;
     }
 
-    &:focus {
-        box-shadow: 0 0 0 3px #fff !important;
-    }
-}
-
-.navbar-toggler-icon {
-    background-image: url("../../../../assets/list.svg") !important;
-}
-
-.show {
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 10px;
-    transition: all 0.2s linear;
-    height: 35vh;
-
-    @media screen and (min-width:768px) {
-        background: transparent;
-        height: auto;
-    }
-}
-
-.navbar .collapsing {
-    background: rgba(0, 0, 0, 0.9);
-    margin-top: 10px;
-    transition: all 0.2s linear;
 }
 
 //buttons
@@ -79,4 +52,11 @@ $font-size-base: 1rem !default;
     border-radius: 10px !important;
     max-width: 95% !important;
     margin: 0 auto !important;
+}
+
+//Menu xs
+.offcanvas.offcanvas-start {
+    top: -10px !important;
+    height: auto;
+    width: 50% !important;
 }

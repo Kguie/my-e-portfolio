@@ -4,7 +4,7 @@ Ce projet est une application réalisée sous React. C'est un e-portfolio permet
 
 ## Technologies utilisées
 
-Ce e-portfolio est réalisé sous React typescript avec l'utilisation de bootstrap.
+Ce e-portfolio est réalisé sous React typescript avec l'utilisation de bootstrap et de sass.
 
 ### Hébergement
 
