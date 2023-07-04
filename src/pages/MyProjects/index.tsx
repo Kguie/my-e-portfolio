@@ -3,7 +3,10 @@
  **/
 
 import { useState } from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+
+import { ProjectProps, projectsList } from "../../data/projects";
+import ProjectDashboard from "../../components/ProjectsDashboard";
 
 /**
  * Affiche mes projets avec possibilité de les trier et de les voir en détail
@@ -15,6 +18,59 @@ export default function MyProjects() {
     const [backend, setBackend] = useState<boolean>(false);
     const [javascript, setJavascript] = useState<boolean>(false);
     const [typescript, setTypescript] = useState<boolean>(false);
+
+    //States des tags recherchés
+    const [addedTags, setAddedTags] = useState<Array<string>>([]);
+
+    /**
+     * Gère l'ajout ou la suppression de tag de la liste addedTags au clic sur un bouton
+     * @param {string} label - Libellé du tag
+     */
+    function handleTag(label: string) {
+        if (addedTags.length > 0 && addedTags.includes(label)) {
+            const newTags = addedTags.filter((tag: string) => tag !== label);
+            setAddedTags(newTags);
+        } else {
+            const newTags = [...addedTags, label];
+            setAddedTags(newTags);
+        }
+    }
+
+    /**
+     * Renvoie la liste de projets à afficher en fonction de la liste de tags sélectionnés
+     * @returns {Array<string>} Liste de projets à afficher
+     */
+    function handleFilteredProjects() {
+        //Renvoie la liste d'origine si aucun tag n'est sélectionné
+        if (addedTags.length === 0) {
+            return projectsList;
+        } else {
+            //Liste de projets filtrée
+            let filteredProjects: Array<ProjectProps> = [];
+            projectsList.forEach((project: ProjectProps) => {
+
+                //Détermine si le tag sélectionné correspond à un des tags du projet
+                let isTaggedProject: boolean = true;
+
+                addedTags.forEach((tag: string) => {
+                    if (!project.tags.includes(tag)) {
+                        isTaggedProject = false;
+                        return;
+                    }
+                });
+                //Ajout du projet à la liste filtrée
+                if (isTaggedProject === true) {
+                    filteredProjects.push(project)
+                };
+            });
+            if (filteredProjects.length === 0) {
+                return [];
+            }
+            else {
+                return filteredProjects;
+            }
+        }
+    }
 
     return (
         <section className="page-section">
@@ -28,23 +84,57 @@ export default function MyProjects() {
                     {/* Section des boutons de filtres pour afficher les cartes projets */}
                     <div className="d-flex mt-5 ms-2  gap-3 align-items-baseline flex-wrap ">
                         <p className="fw-bold">Filtres :</p>
-                        {react ? <Button variant="success" className="text-white" onClick={() => setReact(false)}>React</Button>
-                            : <Button variant="outline-success" onClick={() => setReact(true)} >React</Button>}
-                        {frontend ? <Button variant="success" className="text-white" onClick={() => setFrontend(false)}>Frontend</Button>
-                            : <Button variant="outline-success" onClick={() => setFrontend(true)}>Frontend</Button>}
-                        {backend ? <Button variant="success" className="text-white" onClick={() => setBackend(false)}>Backend</Button>
-                            : <Button variant="outline-success" onClick={() => setBackend(true)}>Backend</Button>}
-                        {javascript ? <Button variant="success" className="text-white" onClick={() => setJavascript(false)}>Javascript</Button>
-                            : <Button variant="outline-success" onClick={() => setJavascript(true)}>Javascript</Button>}
-                        {typescript ? <Button variant="success" className="text-white" onClick={() => setTypescript(false)}>Typescript</Button>
-                            : <Button variant="outline-success" onClick={() => setTypescript(true)}>Typescript</Button>}
+                        {react ?
+                            <Button variant="success" className="text-white"
+                                onClick={() => {
+                                    setReact(false);
+                                    handleTag("React");
+                                }}>React</Button>
+                            : <Button variant="outline-success"
+                                onClick={() => {
+                                    setReact(true)
+                                    handleTag("React");
+                                }} >React</Button>}
+                        {frontend ?
+                            <Button variant="success" className="text-white" onClick={() => {
+                                setFrontend(false);
+                                handleTag("Frontend");
+                            }}>Frontend</Button>
+                            : <Button variant="outline-success" onClick={() => {
+                                setFrontend(true)
+                                handleTag("Frontend");
+                            }}>Frontend</Button>}
+                        {backend ? <Button variant="success" className="text-white" onClick={() => {
+                            setBackend(false);
+                            handleTag("Backend");
+                        }}>Backend</Button>
+                            : <Button variant="outline-success" onClick={() => {
+                                setBackend(true);
+                                handleTag("Backend");
+                            }}>Backend</Button>}
+                        {javascript ? <Button variant="success" className="text-white" onClick={() => {
+                            setJavascript(false);
+                            handleTag("Javascript");
+                        }}>Javascript</Button>
+                            : <Button variant="outline-success" onClick={() => {
+                                setJavascript(true);
+                                handleTag("Javascript");
+                            }}>Javascript</Button>}
+                        {typescript ? <Button variant="success" className="text-white" onClick={() => {
+                            setTypescript(false);
+                            handleTag("Typescript");
+                        }}>Typescript</Button>
+                            : <Button variant="outline-success" onClick={() => {
+                                setTypescript(true);
+                                handleTag("Typescript");
+                            }}>Typescript</Button>}
                     </div>
 
                     {/* Affichage des cartes projets */}
-                    <Row>
-
-                    </Row>
-
+                    {handleFilteredProjects().length > 0 ?
+                        <ProjectDashboard projectsList={handleFilteredProjects()} /> :
+                        <p className="text-center mt-5 fw-bold">Aucun projet ne correspond à votre recherche</p>
+                    }
                 </div>
             </Container>
         </section>);

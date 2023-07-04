@@ -1,0 +1,16 @@
+/**
+ * Style du component ProjectsDashBoard
+ **/
+
+.projects-dashboard {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    row-gap: 50px;
+    justify-content: center;
+
+    @include md-only {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        row-gap: 80px;
+    }
+}

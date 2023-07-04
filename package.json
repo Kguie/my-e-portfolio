@@ -1,10 +1,10 @@
 {
   "name": "my-e-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Ce projet est une application réalisée sous React. C'est un e-portfolio permettant de me présenter, de présenter mes projets, auprès d'éventuels recruteurs, et de me contacter, ou télécharger mon C.V..",
   "author": "Guieba Kévin",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.14.1",

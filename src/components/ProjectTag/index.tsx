@@ -13,7 +13,7 @@ type Props = {
  */
 export default function ProjectTag({ label }: Props) {
     return (
-        <Badge pill bg="primary">
+        <Badge pill bg={label === "Démo disponible!" ? "warning" : "success"}>
             {label}
         </Badge>)
 }
