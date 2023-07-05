@@ -29,7 +29,7 @@ export default function AboutMe() {
                             parcours en suivant la formation OPENCLASSROOMS
                             développeur d'applications - javascript React en alternance pour une durée de 18 mois au rythme de un jour de cours par semaine.
                             <br />
-                            Je serais aussi bien intéressé que par un poste en télétravail que par un poste en présentiel.
+                            Je serais aussi bien intéressé par un poste en télétravail que par un poste en présentiel.
                         </p>
                         <Row>
                             <Col xs={12} lg={6}>
