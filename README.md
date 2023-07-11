@@ -33,18 +33,17 @@ Ce projet est un e-portfolio est l'e-portfolio de GUIEBA Kévin.
 
 ## Structure du Projet
 
-
-├── src/                    # Contient les fichiers sources
-│   ├── assets              # Contient les images 
-│   ├── data/               # Contient les données des projets  
-│   ├── components/         # Composants de l'application
-│   ├── pages/              # Pages de l'application
-│   └── utils/              # Contient les modules utilitaires
-│       ├── router/         # Contient le module myRouter avec les données de routage
-│       ├── style/          # Contient le fichier main.scss 
-│       └── test/           # Contient le module render qui permet les tests
-├── LICENSE                 # Fichier de licence du projet
-└── index.tsx               # Point d'entrée de l'application
+- ├── src/                    # Contient les fichiers sources
+- │   ├── assets              # Contient les images 
+- │   ├── data/               # Contient les données des projets  
+- │   ├── components/         # Composants de l'application
+- │   ├── pages/              # Pages de l'application
+- │   └── utils/              # Contient les modules utilitaires
+- │       ├── router/         # Contient le module myRouter avec les données de routage
+- │       ├── style/          # Contient le fichier main.scss 
+- │       └── test/           # Contient le module render qui permet les tests
+- ├── LICENSE                 # Fichier de licence du projet
+- └── index.tsx               # Point d'entrée de l'application
 
 
 ## Licence
