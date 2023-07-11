@@ -91,7 +91,7 @@ export const projectsList: Array<ProjectProps> = [
         introduction: "Mission réalisée pour une pâtissière indépendante, va de paire avec admin-test backend.",
         githubLink: "https://github.com/Kguie/test-admin-react-app",
         description: {
-            text: "Pour tester l'application, vous pouvez vous connecter avec l'identifiant 'kguie@outlook.com' et le mot de passe 'Testmyapp!2023'"
+            text: "Pour tester l'application, vous pouvez vous connecter avec l'identifiant 'kguie.test@outlook.com' et le mot de passe 'Testmyapp!2023'"
         },
         url: "https://test-admin-app.vercel.app/"
     },
