@@ -11,9 +11,10 @@ type props = {
 }
 
 /**
- *Wrapper permettant d’utiliser le render qui le suit avec tous les éléments nécessaires au fonctionnement des pages et components   
+ * Wrapper permettant d’utiliser le render qui le suit avec tous les éléments nécessaires au fonctionnement des pages et components   
+ * @return {React.ReactElement} - Wrapper des tests.
  */
-function Wrapper({ children }: props) {
+function Wrapper({ children }: props): React.ReactElement {
     return (
         <HelmetProvider >
             <MemoryRouter>

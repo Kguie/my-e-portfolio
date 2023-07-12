@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ReactGA from 'react-ga';
 import reportWebVitals from './reportWebVitals';
 
 import { MyRouter } from './utils/router';
 import "./utils/style/sass/main.scss";
 import { HelmetProvider } from 'react-helmet-async';
-
-//Ajout de google analytics
-ReactGA.initialize('G-9G66DE795D');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
