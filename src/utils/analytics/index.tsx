@@ -10,7 +10,7 @@ export default function AnalyticsListener() {
     const location = useLocation();
 
     useEffect(() => {
-        ReactGA.initialize('votre-id-de-suivi');
+        ReactGA.initialize('G-9G66DE795D');
         ReactGA.pageview(location.pathname + location.search);
     }, [location]);
 
