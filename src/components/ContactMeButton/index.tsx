@@ -14,8 +14,9 @@ type Props = {
  * Affiche le bouton permettant de naviguer vers la route contact
  * @param {boolean} isColored - Détermine si le bouton est sous fond coloré ou blanc.
  * @param {boolean} isLarge - Détermine si le bouton est de taille large ou petit.
+ * @returns {React.ReactElement} - Bouton de contact
  */
-export default function ContactMeButton({ isColored, isLarge }: Props) {
+export default function ContactMeButton({ isColored, isLarge }: Props): React.ReactElement {
     const navigate: NavigateFunction = useNavigate()
 
     return (

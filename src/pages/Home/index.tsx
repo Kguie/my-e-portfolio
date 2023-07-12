@@ -7,9 +7,10 @@ import Banner from "../../components/Banner";
 import SEO from "../../components/Seo";
 
 /**
- * Affiche la page d'accueil 
+ * Affiche la page d'accueil
+ * @returns {React.ReactElement} - section Home 
  */
-export default function Home() {
+export default function Home(): React.ReactElement {
     const title: string = "Portfolio de Guieba Kévin - Page de présentation"
     const description: string = "Présentation de GUIEBA Kévin, qui recherche une alternance pour un poste développeur d'applications javascript react ,où on peut télécharger son CV."
     return (

@@ -15,8 +15,9 @@ type Props = {
  * @param {string} title - Titre de la page
  * @param {string} description - Description du contenu de la page
  * @param {string} type - Type du contenu de la page
+ * @returns {React.ReactElement} - Head des pages.
  */
-export default function SEO({ title, description, type }: Props) {
+export default function SEO({ title, description, type }: Props): React.ReactElement {
     return (
         <Helmet>
             { /* Standard metadata tags */}

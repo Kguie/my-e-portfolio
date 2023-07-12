@@ -3,6 +3,7 @@
  **/
 
 import axios from "axios";
+import ReactGA from 'react-ga';
 import { useEffect, useState } from "react";
 import { Alert, Button } from "react-bootstrap";
 
@@ -15,8 +16,9 @@ type Props = {
  * Affiche le bouton permettant le téléchargement du CV avec un choix entre deux couleurs et deux tailles
  * @param {boolean} isColored - Détermine si le bouton est sous fond coloré ou blanc.
  * @param {boolean} isLarge - Détermine si le bouton est de taille large ou petit.
+ * @returns {React.ReactElement} - Bouton de téléchargement du CV.
  */
-export default function CVButton({ isColored, isLarge }: Props) {
+export default function CVButton({ isColored, isLarge }: Props): React.ReactElement {
     const [error, setError] = useState<boolean>(false);
 
     /**
@@ -35,7 +37,16 @@ export default function CVButton({ isColored, isLarge }: Props) {
 
         } catch (err: any) {
             setError(true)
+            return;
+        } finally {
+            //Crée un évènement google analytics
+            ReactGA.event({
+                category: 'Button',
+                action: 'Click',
+                label: 'Téléchargement du CV',
+            });
         }
+
     }
 
     //Permet la suppression de l'alerte 6s après son apparition lors d'une erreur

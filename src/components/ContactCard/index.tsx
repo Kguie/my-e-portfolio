@@ -3,6 +3,7 @@
  **/
 
 import { Card } from "react-bootstrap";
+import ReactGA from 'react-ga';
 
 type Props = {
     icon: string,
@@ -12,12 +13,27 @@ type Props = {
 }
 
 /**
- * Affiche la carte de contact avec son image, son titre, et son contenu
+ * Affiche une carte de contact avec une image, un titre et du contenu.
+ * @param {string} icon - Chemin vers l'image.
+ * @param {string} title - Titre du contact.
+ * @param {string} text - Contenu explicatif.
+ * @param {string} link - Lien vers le moyen de contact choisi.
+ * @returns {React.ReactElement} - Carte de contact.
  */
-export default function ContactCard({ icon, title, text, link }: Props) {
+export default function ContactCard({ icon, title, text, link }: Props): React.ReactElement {
+
+    //Action google analytics
+    const handleClick = () => {
+        ReactGA.event({
+            category: 'Contact',
+            action: 'Clic',
+            label: "contact par " + title
+        });
+    };
+
     return (
         <Card >
-            <a href={link} className="contact-card">
+            <a href={link} className="contact-card" onClick={handleClick}>
                 <div className="contact-card__arrow">
                     →
                 </div>

@@ -13,8 +13,12 @@ type Props = {
 
 /**
  * Affiche la carte de hard skill avec son image, son titre, et son niveau
+ * @param {string} icon - Chemin vers l'image de l'icône.
+ * @param {string} title - Titre de la compétence.
+ * @param {number} level - Niveau de maîtrise de la compétence.
+ * @returns {React.ReactElement} - Carte compétence.
  */
-export default function SkillCard({ icon, title, level }: Props) {
+export default function SkillCard({ icon, title, level }: Props): React.ReactElement {
     return (
         <Card >
             <div className="skill-card" data-testid="skill-card">

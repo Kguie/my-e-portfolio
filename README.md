@@ -23,7 +23,7 @@ Ce projet est un e-portfolio est l'e-portfolio de GUIEBA Kévin.
 
 ## Installation
 
-- Prérequis système : Ce e-portfolio est réalisé sous React typescript avec l'utilisation de bootstrap et de sass.
+- Prérequis système : Ce e-portfolio est réalisé sous React typescript avec l'utilisation de bootstrap et de sass. Google analytics,ainsi que les principes plusieurs principes de base de SEO ont aussi été appliqués.
 - Installation des dépendances : Cloner ce repository et lancer `yarn install` pour installer les dépendances.
 
 ## Utilisation

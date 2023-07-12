@@ -13,8 +13,9 @@ type Props = {
 
 /**
  * Affiche les cartes projets
+  * @returns {React.ReactElement} - Tableau des cartes.
  */
-export default function ProjectDashboard({ projectsList }: Props) {
+export default function ProjectDashboard({ projectsList }: Props): React.ReactElement {
     return (
         <Row className="projects-dashboard">
             {projectsList.map((project: ProjectProps) =>

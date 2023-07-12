@@ -10,8 +10,9 @@ import ProjectDashboard from "../../components/ProjectsDashboard";
 
 /**
  * Affiche mes projets avec possibilité de les trier et de les voir en détail
+ * @returns {React.ReactElement} - Section MyProjects
  */
-export default function MyProjects() {
+export default function MyProjects(): React.ReactElement {
     //State des filtres
     const [react, setReact] = useState<boolean>(false);
     const [frontend, setFrontend] = useState<boolean>(false);
@@ -25,8 +26,9 @@ export default function MyProjects() {
     /**
      * Gère l'ajout ou la suppression de tag de la liste addedTags au clic sur un bouton
      * @param {string} label - Libellé du tag
+     * @returns {void}
      */
-    function handleTag(label: string) {
+    function handleTag(label: string): void {
         if (addedTags.length > 0 && addedTags.includes(label)) {
             const newTags = addedTags.filter((tag: string) => tag !== label);
             setAddedTags(newTags);
@@ -40,7 +42,7 @@ export default function MyProjects() {
      * Renvoie la liste de projets à afficher en fonction de la liste de tags sélectionnés
      * @returns {Array<string>} Liste de projets à afficher
      */
-    function handleFilteredProjects() {
+    function handleFilteredProjects(): Array<any> {
         //Renvoie la liste d'origine si aucun tag n'est sélectionné
         if (addedTags.length === 0) {
             return projectsList;

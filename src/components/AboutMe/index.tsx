@@ -9,9 +9,10 @@ import ContactMeButton from "../ContactMeButton";
 import TextButton from "../TextButton";
 
 /**
- * Affiche le component avec une description de mon profil et de ce que je recherche 
+ * Affiche le component avec une description de mon profil et de ce que je recherche
+ * @returns { React.ReactElement} - Section A propos 
  */
-export default function AboutMe() {
+export default function AboutMe(): React.ReactElement {
     return (
         <section className="page-section">
             <Container fluid='md' >
