@@ -22,7 +22,7 @@ export default function SkillCard({ icon, title, level }: Props): React.ReactEle
     return (
         <Card >
             <div className="skill-card" data-testid="skill-card">
-                <Card.Img height={"50px"} width={"40px"} variant="horizontal" src={icon} alt="logo html5" />
+                <Card.Img height={"50px"} width={"40px"} variant="horizontal" src={icon} alt={"logo " + title} />
                 <Card.Body className="skill-card__content d-flex flex-column text-body">
                     <h2 className="fs-5">{title}</h2>
                     <ProgressBar now={level} variant="primary" />

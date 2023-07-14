@@ -3,12 +3,13 @@
  **/
 
 // scss-docs-start color-variables
-$teal: #39B180 !default;
+$teal: #265e47 !default;
 $cyan: #273f59 !default;
 
 // scss-docs-start theme-color-variables
 $primary: $teal;
 $success: $cyan;
+$warning: #876b16;
 
 //Taille de police de référence
 $font-size-base: 1rem !default;

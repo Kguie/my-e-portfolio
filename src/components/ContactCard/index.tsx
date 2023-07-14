@@ -37,7 +37,7 @@ export default function ContactCard({ icon, title, text, link }: Props): React.R
                 <div className="contact-card__arrow">
                     →
                 </div>
-                <Card.Img className="ms-4 " width={"40px"} variant="horizontal" src={icon} alt="téléphone" />
+                <Card.Img className="ms-4 " width={"40px"} variant="horizontal" src={icon} alt={title} />
                 <Card.Body className="d-flex flex-column  align-items-end text-body">
                     <h2 className="fs-5">{title}</h2>
                     <Card.Text>
