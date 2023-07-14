@@ -36,7 +36,7 @@ export default function NavHeader(): React.ReactElement {
             <Navbar className={((currentUrl.includes("contact") || currentUrl.includes("skills") || currentUrl.includes("projects")) ? "bg-primary" : "bg-transparent")}>
                 <Container className='d-flex justify-content-end' fluid>
                     <div className='d-md-none btn btn-outline' onClick={() => setMenuOpened(!menuOpened)}>
-                        <Image src={buttonIcon} width={"30px"} />
+                        <Image src={buttonIcon} width={"30px"} alt='menu' />
                     </div>
                     <Nav className="me-auto w-100 justify-content-end mt-1 d-none d-md-flex  ">
                         <Nav.Link data-testid="nav-link" href="#" onClick={() => navigate('/')} ><p className='menu__link'>Accueil</p></Nav.Link>
