@@ -14,6 +14,7 @@ import reactIcon from "../../assets/react.svg";
 import typescriptIcon from "../../assets/typescript.svg";
 import reduxIcon from "../../assets/redux.svg";
 import SEO from "../../components/Seo";
+import { useGoogleAnalytics } from "../../utils/hooks";
 
 /**
  * Affiche la page skills comprenant les hard skills
@@ -22,6 +23,8 @@ import SEO from "../../components/Seo";
 export default function Skills(): React.ReactElement {
     const title: string = "Portfolio de Guieba Kévin - Compétences";
     const description: string = "Présentation des compétences techniques de GUIEBA Kévin, qui recherche une alternance pour un poste développeur d'applications javascript react en Guadeloupe ou en full-remote.";
+
+    useGoogleAnalytics();
 
     return (
         <section className="page-section">

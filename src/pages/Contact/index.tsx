@@ -11,6 +11,7 @@ import linkedinIcon from "../../assets/linkedin.svg";
 import ContactCard from "../../components/ContactCard";
 import SEO from "../../components/Seo";
 import CVButton from "../../components/CVButton";
+import { useGoogleAnalytics } from "../../utils/hooks";
 
 /**
  * Affiche la page Contact avec tous les moyens de me contacter
@@ -19,6 +20,8 @@ import CVButton from "../../components/CVButton";
 export default function Contact(): React.ReactElement {
     const title: string = "Portfolio de Guieba Kévin - Page de contact";
     const description: string = "Vous cherchez à contacter GUIEBA Kévin, qui recherche une alternance pour un poste développeur d'applications javascript react en Guadeloupe ou en full-remote";
+
+    useGoogleAnalytics();
 
     return (
         <section className="page-section">

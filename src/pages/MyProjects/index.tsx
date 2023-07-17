@@ -7,6 +7,7 @@ import { Button, Container } from "react-bootstrap";
 
 import { ProjectProps, projectsList } from "../../data/projects";
 import ProjectDashboard from "../../components/ProjectsDashboard";
+import { useGoogleAnalytics } from "../../utils/hooks";
 
 /**
  * Affiche mes projets avec possibilité de les trier et de les voir en détail
@@ -22,6 +23,8 @@ export default function MyProjects(): React.ReactElement {
 
     //States des tags recherchés
     const [addedTags, setAddedTags] = useState<Array<string>>([]);
+
+    useGoogleAnalytics();
 
     /**
      * Gère l'ajout ou la suppression de tag de la liste addedTags au clic sur un bouton
