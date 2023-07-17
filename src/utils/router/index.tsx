@@ -2,6 +2,8 @@
  * Gestion de la logique de routage avec ajout de google analytics
  **/
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+import ReactGA from 'react-ga';
 
 import Home from "../../pages/Home";
 import NavHeader from "../../components/NavHeader";
@@ -14,14 +16,12 @@ import MyProjects from "../../pages/MyProjects";
  * @return {React.ReactElement} - Routeurs de l'application.
  */
 export function MyRouter(): React.ReactElement {
-    // let location = useLocation();
+    //Récupération de l'adresse
 
-    // useEffect(() => {
-    //     console.log("coucou")
-    //     const TRACKER_ID: string = "G-2W8LH9SGWP"
-    //     ReactGA.initialize(TRACKER_ID);
-    //     ReactGA.pageview(window.location.pathname + window.location.search);
-    // }, [location]);
+    useEffect(() => {
+        const TRACKER_ID: string = "G-2W8LH9SGWP";
+        ReactGA.initialize(TRACKER_ID);
+    }, []);
     return (
         <BrowserRouter>
             <NavHeader />
