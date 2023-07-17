@@ -11,14 +11,14 @@ import Contact from "../../pages/Contact";
 import Skills from "../../pages/Skills";
 import MyProjects from "../../pages/MyProjects";
 
-ReactGA.initialize('G-9G66DE795D');
-
 /**
  * Gestion du router et des routes de l'application
  * @return {React.ReactElement} - Routeurs de l'application.
  */
 export function MyRouter(): React.ReactElement {
     useEffect(() => {
+        const TRACKER_ID: string = "G-2W8LH9SGWP"
+        ReactGA.initialize(TRACKER_ID);
         ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);
     return (

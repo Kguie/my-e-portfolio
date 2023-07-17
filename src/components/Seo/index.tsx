@@ -35,6 +35,7 @@ export default function SEO({ title, description, type }: Props): React.ReactEle
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             { /* End Twitter tags */}
+
         </Helmet>
     )
 }
