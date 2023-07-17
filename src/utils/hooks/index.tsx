@@ -13,8 +13,6 @@ export function useGoogleAnalytics(): void {
     const location = useLocation();
 
     useEffect(() => {
-        const TRACKER_ID = "G-2W8LH9SGWP";
-        ReactGA.initialize(TRACKER_ID);
         ReactGA.pageview(window.location.pathname + window.location.search);
     }, [location]);
 }
