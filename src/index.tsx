@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import ReactGA from 'react-ga';
 
 import { MyRouter } from './utils/router';
 import "./utils/style/sass/main.scss";
 import { HelmetProvider } from 'react-helmet-async';
-
-const TRACKER_ID: string = "G-2W8LH9SGWP"
-ReactGA.initialize(TRACKER_ID);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -3,7 +3,7 @@
  **/
 
 import axios from "axios";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import { useEffect, useState } from "react";
 import { Alert, Button } from "react-bootstrap";
 

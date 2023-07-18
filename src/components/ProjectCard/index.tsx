@@ -5,7 +5,7 @@
 import { Button, Card } from "react-bootstrap";
 import { useState } from "react";
 import { useWindowSize } from "react-use";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import { ProjectProps } from "../../data/projects";
 import ProjectTag from "../ProjectTag";
