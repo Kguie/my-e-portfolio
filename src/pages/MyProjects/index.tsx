@@ -77,6 +77,7 @@ export default function MyProjects(): React.ReactElement {
         }
     }
 
+    useGoogleAnalytics();
     return (
         <section className="page-section">
             <Container fluid='md'>
