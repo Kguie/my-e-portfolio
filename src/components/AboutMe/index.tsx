@@ -28,7 +28,7 @@ export default function AboutMe(): React.ReactElement {
                             En reconversion professionnelle, installé en Guadeloupe, après
                             une formation de développeur web, je cherche à poursuivre mon
                             parcours en suivant la formation OPENCLASSROOMS
-                            développeur d'applications - javascript React en alternance pour une durée de 18 mois au rythme de un jour de cours par semaine.
+                            développeur d'applications - javascript React en alternance pour une durée de 24 mois au rythme de un jour de cours par semaine.
                             <br />
                             Je serais aussi bien intéressé par un poste en télétravail que par un poste en présentiel.
                         </p>
